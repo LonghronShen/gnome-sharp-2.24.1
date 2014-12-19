@@ -1,0 +1,9 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+
+
+Name: GConf#
+Description: GConf# - GConf .NET Binding
+Version: @VERSION@
+Libs: -r:${libdir}/mono/@PACKAGE_VERSION@/gconf-sharp.dll

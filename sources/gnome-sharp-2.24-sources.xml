@@ -1,0 +1,66 @@
+<gapi-parser-input>
+  <api filename="../gnomevfs/gnome-vfs-api.raw">
+    <library name="gnomevfs-2">
+      <namespace name="GnomeVFS">
+        <directory path="gnome-vfs-2.22.0/libgnomevfs">
+          <exclude>gnome-vfs-file-size.h</exclude>
+          <exclude>gnome-vfs-method.h</exclude>
+          <exclude>gnome-vfs-transform.h</exclude>
+          <!-- These files break the parser -->
+          <exclude>GNOME_VFS_Daemon-common.c</exclude>
+          <exclude>GNOME_VFS_Daemon.h</exclude>
+          <exclude>GNOME_VFS_Daemon-skels.c</exclude>
+          <exclude>GNOME_VFS_Daemon-stubs.c</exclude>
+          <exclude>gnome-vfs-job.c</exclude>
+          <exclude>gnome-vfs-job.h</exclude>
+        </directory>
+      </namespace>
+    </library>
+  </api>
+  <api filename="../gnome/gnome-api.raw">
+    <library name="gnome-2">
+      <namespace name="Gnome">
+        <dir>libgnome-2.23.4/libgnome</dir>
+      </namespace>
+    </library>
+    <library name="gnomecanvas-2">
+      <namespace name="Gnome">
+        <directory path="libgnomecanvas-2.20.1.1/libgnomecanvas">
+          <exclude>gailcanvas.h</exclude>
+          <exclude>gailcanvasitem.h</exclude>
+          <exclude>gailcanvasgroup.h</exclude>
+          <exclude>gailcanvaswidget.h</exclude>
+          <exclude>gailcanvastext.h</exclude>
+          <exclude>gailcanvasitemfactory.h</exclude>
+          <exclude>gailcanvasgroupfactory.h</exclude>
+          <exclude>gailcanvaswidgetfactory.h</exclude>
+          <exclude>gailcanvastextfactory.h</exclude>
+        </directory>
+      </namespace>
+    </library>
+    <library name="gnomeui-2">
+      <namespace name="Gnome">
+        <directory path="libgnomeui-2.23.4/libgnomeui">
+	  <!-- These were ignored in gtk# 1.0 due to a parser bug, but contain only deprecated methods -->
+	  <exclude>gnome-app-util.h</exclude>
+	  <exclude>gnome-dialog.h</exclude>
+	  <exclude>gnome-dialog-util.h</exclude>
+	  <exclude>gnome-mdi.h</exclude>
+	  <exclude>gnome-mdi-child.h</exclude>
+	  <exclude>gnome-mdi-generic-child.h</exclude>
+	  <exclude>gnome-mdi-session.h</exclude>
+	  <exclude>gnome-messagebox.h</exclude>
+	  <exclude>gnome-pixmap.h</exclude>
+	  <exclude>gnome-propertybox.h</exclude>
+	</directory>
+      </namespace>
+    </library>
+  </api>
+  <api filename="../art/art-api.raw">
+    <library name="art_lgpl">
+      <namespace name="Art">
+        <dir>libart_lgpl-2.3.20</dir>
+      </namespace>
+    </library>
+  </api>
+</gapi-parser-input>

@@ -1,0 +1,11 @@
+prefix=${pcfiledir}/../..
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+gapidir=${prefix}/share/gapi-2.0
+
+
+Name: GnomeVfs#
+Description: GnomeVfs# - GNOME-VFS .NET Binding
+Version: 2.24.1
+Cflags: -I:${gapidir}/gnome-vfs-api.xml
+Libs: -r:${libdir}/mono/gtk-sharp-2.0/gnome-vfs-sharp.dll
